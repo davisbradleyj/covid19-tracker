@@ -386,7 +386,7 @@ function getHealthNews() {
             // Append pubDatea to document if exists
             $articleListItem.append("<h5>" + pubDate + "</h5>");
             // Append hr to separate article data
-            $articleListItem.append("<br/>");
+            $articleListItem.append("<hr/>");
             // Append the article
             $articleList.append($articleListItem);
         }
