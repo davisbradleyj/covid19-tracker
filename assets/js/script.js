@@ -160,148 +160,57 @@ function getStateInfo(st) {
         url: queryUsaURL,
         method: "GET"
     }).then(function (response) {
-        var finalStats = {};
+        var finalStats = {
+        };
+        // state is used as the key for finalStats object
         var state;
         var lookUp = {
-            "Alaska": "AK",
-            "AK": "AK",
-            "Alabama": "AL",
-            "AL": "AL",
-            "Arizona": "AZ",
-            "AZ": "AZ",
-            "Arkansas": "AR",
-            "AR": "AR",
-            "California": "CA",
-            "CA": "CA",
-            "Colorado": "CO",
-            "CO": "CO",
-            "Connecticut": "CT",
-            "CT": "CT",
-            "Delaware": "DE",
-            "DE": "DE",
-            "District of Columbia": "DC",
-            "DC": "DC",
-            "Florida": "FL",
-            "FL": "FL",
-            "Georgia": "GA",
-            "GA": "GA",
-            "Hawaii": "HI",
-            "HI": "HI",
-            "Idaho": "ID",
-            "ID": "ID",
-            "Illinois": "IL",
-            "IL": "IL",
-            "Indiana": "IN",
-            "IN": "IN",
-            "Iowa": "IA",
-            "IA": "IA",
-            "Kansas": "KS",
-            "KS": "KS",
-            "Kentucky": "KY",
-            "KY": "KY",
-            "Louisiana": "LA",
-            "LA": "LA",
-            "Maine": "ME",
-            "ME": "ME",
-            "Maryland": "MD",
-            "MD": "MD",
-            "Massachusetts": "MA",
-            "MA": "MA",
-            "Michigan": "MI",
-            "MI": "MI",
-            "Minnesota": "MN",
-            "MN": "MN",
-            "Mississippi": "MS",
-            "MS": "MS",
-            "Missouri": "MO",
-            "MO": "MO",
-            "Montana": "MT",
-            "MT": "MT",
-            "Nebraska": "NE",
-            "NE": "NE",
-            "Nevada": "NV",
-            "NV": "NV",
-            "New Hampshire": "NH",
-            "NH": "NH",
-            "New Jersey": "NJ",
-            "NJ": "NJ",
-            "New Mexico": "NM",
-            "NM": "NM",
-            "New York": "NY",
-            "NY": "NY",
-            "North Carolina": "NC",
-            "NC": "NC",
-            "North Dakota": "ND",
-            "ND": "ND",
-            "Ohio": "OH",
-            "OH": "OH",
-            "Oklahoma": "OK",
-            "OK": "OK",
-            "Oregon": "OR",
-            "OR": "OR",
-            "Pennsylvania": "PA",
-            "PA": "PA",
-            "Rhode Island": "RI",
-            "RI": "RI",
-            "South Carolina": "SC",
-            "SC": "SC",
-            "South Dakota": "SD",
-            "SD": "SD",
-            "Tennessee": "TN",
-            "TN": "TN",
-            "Texas": "TX",
-            "TX": "TX",
-            "Utah": "UT",
-            "UT": "UT",
-            "Vermont": "VT",
-            "VT": "VT",
-            "Virginia": "VA",
-            "VA": "VA",
-            "Washington": "WA",
-            "WA": "WA",
-            "West Virginia": "WV",
-            "WV": "WV",
-            "Wisconsin": "WI",
-            "WI": "WI",
-            "Wyoming": "WY"
+            "Alaska": "AK", "AK": "AK", "Alabama": "AL", "AL": "AL", "Arizona": "AZ",
+            "AZ": "AZ", "Arkansas": "AR", "AR": "AR", "California": "CA", "CA": "CA",
+            "Colorado": "CO", "CO": "CO", "Connecticut": "CT", "CT": "CT", "Delaware": "DE",
+            "DE": "DE", "District of Columbia": "DC", "DC": "DC", "Florida": "FL",
+            "FL": "FL", "Georgia": "GA", "GA": "GA", "Hawaii": "HI", "HI": "HI", "Idaho": "ID",
+            "ID": "ID", "Illinois": "IL", "IL": "IL", "Indiana": "IN", "IN": "IN", "Iowa": "IA", "IA": "IA", "Kansas": "KS", "KS": "KS", "Kentucky": "KY", "KY": "KY",
+            "Louisiana": "LA", "LA": "LA", "Maine": "ME", "ME": "ME", "Maryland": "MD",
+            "MD": "MD", "Massachusetts": "MA", "MA": "MA", "Michigan": "MI", "MI": "MI",
+            "Minnesota": "MN", "MN": "MN", "Mississippi": "MS", "MS": "MS", "Missouri": "MO",
+            "MO": "MO", "Montana": "MT", "MT": "MT", "Nebraska": "NE", "NE": "NE",
+            "Nevada": "NV", "NV": "NV", "New Hampshire": "NH", "NH": "NH", "New Jersey": "NJ",
+            "NJ": "NJ", "New Mexico": "NM", "NM": "NM", "New York": "NY", "NY": "NY",
+            "North Carolina": "NC", "NC": "NC", "North Dakota": "ND", "ND": "ND",
+            "Ohio": "OH", "OH": "OH", "Oklahoma": "OK", "OK": "OK", "Oregon": "OR",
+            "OR": "OR", "Pennsylvania": "PA", "PA": "PA", "Rhode Island": "RI",
+            "RI": "RI", "South Carolina": "SC", "SC": "SC", "South Dakota": "SD",
+            "SD": "SD", "Tennessee": "TN", "TN": "TN", "Texas": "TX", "TX": "TX",
+            "Utah": "UT", "UT": "UT", "Vermont": "VT", "VT": "VT", "Virginia": "VA",
+            "VA": "VA", "Washington": "WA", "WA": "WA", "West Virginia": "WV", "WV": "WV",
+            "Wisconsin": "WI", "WI": "WI", "Wyoming": "WY"
         };
 
-        var stChk = [" CA", " IL", " NE", " TX", " AZ", " AR", " WA", " MA", " RI", " WI", " NC", " SC", " NY", " FL", " GA", " NH", " FL", " LA", " PA", " NV", " NJ", " CO", " CT", " HI", " UT", " OK", " MD", " VA", " IL", " IN", " OH", " D.C.", " TN", " AL", " MO", " MS", " WV", "Colorado", "Florida", "New Jersey", "Oregon", "Texas", "Pennsylvania", "Iowa", "Maryland", "North Carolina", "South Carolina", "Tennessee", "Virginia", "Indiana", "Kentucky", "New York", "District of Columbia", "Nevada", "New Hampshire", "Minnesota", "Nebraska", "Massachusetts", "Ohio", "Rhode Island", "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah", "Kansas", "Louisiana", "Missouri", "Vermont", "Alaska", "Arkansas", "Delaware", "Idaho", "Maine", "Michigan", "Mississippi", "Montana", "New Mexico", "North Dakota", "South Dakota", "West Virginia", "Wyoming", "Georgia", "Alabama", "Alaska", "Idaho", "Washington", "Illinois"];
+        var stChk = [
+            " CA", " IL", " NE", " TX", " AZ", " AR", " WA", " MA", " RI", " WI", " NC", " SC", " NY", " FL", " GA", " NH", " FL", " LA", " PA", " NV", " NJ", " CO", " CT", " HI", "  UT", " OK", " MD", " VA", " IL", " IN", " OH", " D.C.", " TN", " AL", " MO", " MS", " WV", "Colorado", "Florida", "New Jersey", "Oregon", "Texas", "Pennsylvania", "Iowa", "Maryland", "North Carolina", "South Carolina", "Tennessee", "Virginia", "Indiana", "Kentucky", "New York", "District of Columbia", "Nevada", "New Hampshire", "Minnesota", "Nebraska", "Massachusetts", "Ohio", "Rhode Island", "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah", "Kansas", "Louisiana", "Missouri", "Vermont", "Alaska", "Arkansas", "Delaware", "Idaho", "Maine", "Michigan", "Mississippi", "Montana", "New Mexico", "North Dakota", "South Dakota", "West Virginia", "Wyoming", "Georgia", "Alabama", "Alaska", "Idaho", "Washington", "Illinois"
+        ];
+
 
         for (i = 0; i < response.length; i++) {
+            let dateResp = response[i].Date;
+            let casesResp = response[i].Cases;
+            let provinceResp = response[i].Province;
+                state = lookUp[provinceResp];
 
-            // This is the process that cleans and filters the data into states
-            var provinceArr = response[i].Province.split(',');
-            // only trims element 1 if it exists
-            if (provinceArr[1] !== undefined) {
-                var province1 = provinceArr[1].trim();
-            }
-
-            if (stChk.indexOf(provinceArr[0]) !== -1) {
-                state = lookUp[provinceArr[0]];
-                if (state === undefined) { console.log(provinceArr[0]) }
-              
-            } else {
-                if (province1 !== undefined && province1.length === 2) {
-                    state = lookUp[province1];
-                    if (state === undefined) { console.log(provinceArr[1]) }
-                }
-            }
-
-            // This is the process that pushes the data into an object array that we send the chartPrep
             if (finalStats[state]) {
                 var confirmed = {
-                    date: response[i].Date,
-                    confCases: response[i].Cases
+                    date: dateResp,
+                    confCases: casesResp
                 };
                 finalStats[state].push(confirmed);
-                //push new obj (date and count)
-            } else if (response[i].Date !== undefined) {
-                finalStats[state] = [{ date: response[i].Date, confCases: response[i].Cases }];
+            } else if (dateResp !== undefined) {
+                finalStats[state] = [confirmed];
             }
         }
-        var filterState = st;
-        chartPrep(finalStats[filterState], filterState);
+        console.log('======= Filtered Stats =============')
+        console.log(finalStats[st])
+        chartPrep(finalStats[st], st);
 
     });
 }
