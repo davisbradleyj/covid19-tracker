@@ -1,5 +1,5 @@
 # Covid-19 Tracker
-https://chindowns.github.io/covid19-tracker
+https://davisbradleyj.github.io/covid19-tracker
 
 In January 2020, the World Health Organizatin declared the Covid-19 Virus (aka Coronavirus) represents a public health emergency of international concern. On January 31, the U.S. Department of Health and Human Services declared the virus to be a health emergency for the United States.  The first recorded case in the United States was on January 22, 2020.
 
