@@ -235,6 +235,7 @@ function ctryOnClick() {
     // Lookup table to convert country code to country for covidAPI
     var lookupCtry = {
         us: "us",
+        es: "spain",
         it: "italy",
         cn: "china",
         de: "germany",
@@ -309,6 +310,7 @@ marker1.key = "us";
 var popup1;
 var marker2 = L.marker([41.9028, 12.4964]).addTo(map).on('click', ctryOnClick); // Italy
 marker2.key = "it";
+var popup2;
 var marker3 = L.marker([52.1326, 5.2913]).addTo(map).on('click', ctryOnClick); // Netherland
 marker3.key = "nl";
 var popup3;
@@ -336,6 +338,9 @@ var popup10;
 var marker11 = L.marker([-25.2744, 133.7751]).addTo(map).on('click', ctryOnClick); // Australia
 marker11.key = "au"
 var popup11;
+var marker12 = L.marker([40.4637, 3.7492]).addTo(map).on('click', ctryOnClick); // Spain
+marker12.key = "es"
+var popup12;
 
 var circle1 = L.circleMarker([37.786542, -122.386022], {
     color: "red", fillColor: "#f03", fillOpacity: 0.5,
