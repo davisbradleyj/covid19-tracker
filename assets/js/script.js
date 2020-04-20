@@ -79,6 +79,7 @@ function renderCtryCases() {
     marker9.bindPopup(popupTotal);
     marker10.bindPopup(popupTotal);
     marker11.bindPopup(popupTotal);
+    marker12.bindPopup(popupTotal);
 }
 
 function renderModals() { }
@@ -266,7 +267,7 @@ var country = "us"
 function getHealthNews() {
     var healthQuery = "https://newsapi.org/v2/top-headlines?country=" + country + "&category=health&apiKey=fee4776affce4f0fa44e7bca791fbb01"
     $.ajax({
-        url: "https://newsapi.org/v2/top-headlines?country=" + country + "&category=health&apiKey=fee4776affce4f0fa44e7bca791fbb01",
+        url: healthQuery,
         method: "GET"
     }).then(function (response) {
         $("#news-box").empty();
