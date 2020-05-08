@@ -12,24 +12,26 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
+
     <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
     <link rel="shortcut icon" href="assets/images/logo-covid-project-1.ico" />
-    <title>Covid-19</title>
+    <title>Covid-19 Tracker</title>
 </head>
-
 <body>
     <header class="hero is-12 has-background-dark">
         <div class="hero-body">
-            <div class="columns is-mobile is-centered is-vcentered">
-                <img class="image is-64x64" src="./assets/images/logo-covid-project-1.png"><span
-                    class="title is-1 has-text-light is-marginless has-text-centered">Covid-19 Tracker</span><img
-                    class="image is-64x64" src="./assets/images/logo-covid-project-1.png">
+            <div class="columns is-desktop is-centered is-vcentered">
+                <div class="column is-centered">
+                <h1 class="title is-1 has-text-light has-text-centered">Covid-19 Tracker</h1>
+                </div>
+                <div id="global-stats" class="column is-centered has-text-light has-text-centered"></div>
             </div>
         </div>
     </header>
