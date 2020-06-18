@@ -1,5 +1,5 @@
 # Covid-19 Tracker
-https://davisbradleyj.github.io/covid19-tracker
+https://bd-covid19-tracker.herokuapp.com
 
 In January 2020, the World Health Organizatin declared the Covid-19 Virus (aka Coronavirus) represents a public health emergency of international concern. On January 31, the U.S. Department of Health and Human Services declared the virus to be a health emergency for the United States.  The first recorded case in the United States was on January 22, 2020.
 
@@ -21,7 +21,7 @@ The Mapbox web service APIs allowed the application to access mapbox tools and m
 Open-Source JavaScript library allowed the application to pin markers to the map and open PopUps for the country data when clicked.
 
 * NewsAPI   
-A simple and easy-to-use API that returns JSON metadata for international headlines with the ability to filter by topic (HEALTH).
+A simple and easy-to-use API that returns JSON metadata for international headlines with the ability to filter by topic (HEALTH). Unfortunately, NewsAPI has recently put their data behind a prohibitive paywall and other news sources are being researched.  Until a revised news source has been put in place, News articles will only be visible in a development environment
 
 * api.covid19api (getpostman)   
 Provides detailed up to date status reports on Covid-19 cases around the world.
