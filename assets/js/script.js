@@ -78,7 +78,6 @@ $.ajax({
     marker14.key = "ru"
     marker15 = L.marker([20.5937, 78.9629], {icon: blueIcon}).addTo(map).on('click', countryClick); // India
     marker15.key = "in"
-
     // MARKERS placed on the states to pull up the US Totals
     var circle1 = L.circle([37.786542, -122.386022], {color: 'red', fillColor:'#ffcc99', fillOpacity: 0.1, weight: 2, radius: 100000}).addTo(map).on('click', onClick);
     circle1.key = "US";
@@ -453,11 +452,10 @@ function onClick() {
 
 // News API Query
 function getHealthNews(location) {
-    var healthQuery = "https://newsapi.org/v2/top-headlines?country=" + location + "&category=health&apiKey=fee4776affce4f0fa44e7bca791fbb01"
-
     $.ajax({
         url: "https://newsapi.org/v2/top-headlines?country=" + location + "&category=health&apiKey=fee4776affce4f0fa44e7bca791fbb01",
-        method: "GET"
+        method: "GET",
+        
     }).then(function (response) {
 
         // Clears News DIV when a country query responds
