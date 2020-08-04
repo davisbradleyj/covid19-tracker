@@ -1,0 +1,23 @@
+{
+  "name": "covid19_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davisbradleyj/New_Covid.git"
+  },
+  "author": "Brad Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davisbradleyj/New_Covid/issues"
+  },
+  "homepage": "https://github.com/davisbradleyj/New_Covid#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  }
+}

@@ -1,5 +1,5 @@
 # Covid-19 Tracker
-https://bd-covid19-tracker.herokuapp.com
+https://davisbradleyj.github.io/covid19-tracker
 
 In January 2020, the World Health Organizatin declared the Covid-19 Virus (aka Coronavirus) represents a public health emergency of international concern. On January 31, the U.S. Department of Health and Human Services declared the virus to be a health emergency for the United States.  The first recorded case in the United States was on January 22, 2020.
 
@@ -8,7 +8,7 @@ This application, Covid-19 Tracker is a web application that enables the user to
 In the United States, the user has the ability to zoom into the US, select the marker in the state and see a chart that plots confirmed cases by day for that state. 
 
 ## Application 
-![Site](assets/images/covid-19-animated-app.gif)
+![Site](public/images/covid-19-animated-app.gif)
 
 ## Technologies Used
 * Bulma   
@@ -21,7 +21,7 @@ The Mapbox web service APIs allowed the application to access mapbox tools and m
 Open-Source JavaScript library allowed the application to pin markers to the map and open PopUps for the country data when clicked.
 
 * NewsAPI   
-A simple and easy-to-use API that returns JSON metadata for international headlines with the ability to filter by topic (HEALTH). Unfortunately, NewsAPI has recently put their data behind a prohibitive paywall and other news sources are being researched.  Until a revised news source has been put in place, News articles will only be visible in a development environment
+A simple and easy-to-use API that returns JSON metadata for international headlines with the ability to filter by topic (HEALTH).
 
 * api.covid19api (getpostman)   
 Provides detailed up to date status reports on Covid-19 cases around the world.
@@ -48,8 +48,3 @@ https://davisbradleyj.github.io
 *** Michael Downs   
 http://www.linkedin.com/in/michaeldownssj   
 https://chindowns.github.io/ 
-
-
-
-
-
